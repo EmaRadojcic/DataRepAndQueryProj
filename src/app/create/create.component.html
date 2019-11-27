@@ -1,0 +1,10 @@
+<mat-card>
+        <form (submit)="onAddPlayer(playerForm)" #playerForm="ngForm">
+          <mat-form-field>
+            <label>  Title</label>
+            <input matInput type="text" name="name" ngModel required #title="ngModel">
+          </mat-form-field>
+          
+          <button mat-raised-button color="accent" type="submit">Save Player</button>
+        </form>
+      </mat-card>

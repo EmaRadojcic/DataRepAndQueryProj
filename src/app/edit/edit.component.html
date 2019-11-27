@@ -1,0 +1,35 @@
+<mat-card>
+    <form (submit)="onEditPLayer(playerForm)" #playerForm="ngForm">
+        <mat-form-field>
+            <label> Player Name:</label>
+            <input matInput type="text" name="name" ngModel={{player.name}} required #title="ngModel">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <label>Player Level</label>
+            <textarea matInput name="level" ngModel={{player.level}} required #content="ngModel"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <label>Player Guild</label>
+            <textarea matInput name="guild" ngModel={{player.guild}} required #content="ngModel"></textarea>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <label>Player Icon:</label>
+            <textarea matInput rows="4" name="icon" ngModel={{player.icon}} required #content="ngModel"></textarea>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <label>Date Joined:</label>
+            <input matInput name="joined" ngModel={{player.joined}} [matDatepicker]="picker"
+                placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+
+        </mat-form-field> -->
+
+        <button mat-raised-button color="accent" type="submit">Edit Player</button>
+    </form>
+</mat-card>
