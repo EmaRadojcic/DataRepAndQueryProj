@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule,MatRippleModule} from '@angular/material';
+import {MatSliderModule} from '@angular/material/slider';
+
+
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -21,17 +24,23 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { HomePageComponent } from './home-page/home-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ReadComponent,
     CreateComponent,
     EditComponent,
-    HomePageComponent
+    HomePageComponent,
+   
+    
   ],
   imports: [
+    MatSliderModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRippleModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

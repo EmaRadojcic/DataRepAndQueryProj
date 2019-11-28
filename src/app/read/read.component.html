@@ -4,15 +4,14 @@
             <mat-panel-title>
                 <h3> {{ player.name }} </h3>
             </mat-panel-title>
-            <!-- <mat-panel-description>
+           <mat-panel-description>
                 <h3>{{ player.level }}</h3>
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <img src="{{player.icon}}"> -->
-    </mat-expansion-panel-header>
+        <!-- <img src="{{player.icon}}"> -->
+    
         <mat-action-row>
             <button mat-button [routerLink]="['/edit', player._id]" color="primary">EDIT</button>
-
             <button mat-button (click)="onDelete(player._id)" color="warn">DELETE</button>
         </mat-action-row>
     </mat-expansion-panel>

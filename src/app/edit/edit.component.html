@@ -1,14 +1,14 @@
 <mat-card>
-    <form (submit)="onEditPLayer(playerForm)" #playerForm="ngForm">
+    <form (submit)="onEditPlayer(playerForm)" #playerForm="ngForm">
         <mat-form-field>
             <label> Player Name:</label>
             <input matInput type="text" name="name" ngModel={{player.name}} required #title="ngModel">
         </mat-form-field>
-        <!-- <mat-form-field>
+       <mat-form-field>
             <label>Player Level</label>
             <textarea matInput name="level" ngModel={{player.level}} required #content="ngModel"></textarea>
         </mat-form-field>
-
+  <!--
         <mat-form-field>
             <label>Player Guild</label>
             <textarea matInput name="guild" ngModel={{player.guild}} required #content="ngModel"></textarea>

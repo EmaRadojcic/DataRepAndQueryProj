@@ -1,5 +1,4 @@
 // server.js
-
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -14,7 +13,7 @@ const Schema = mongoose.Schema;
 
 const playerSchema = new Schema({
   name:String,
-//  level:String,
+  level:number,
 //  guild:String,
  // icon:String,
  // joined:Date
@@ -81,18 +80,16 @@ console.log(req.body.name);
 
 PlayerModel.create({
   name: req.body.name,
-//  level: req.body.level,
+  level: req.body.level,
  // icon: req.body.icon,
  // guild: req.body.guild,
   //joined: req.body.joined
 
 });
 res.json('data uploaded')
-
-
 })
 
-//get fata 
+//get data 
 app.get('/api/players/:id',(req,res)=>{
   console.log(req.params.id);
 

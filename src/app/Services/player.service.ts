@@ -16,8 +16,8 @@ export class PlayerService {
   }
 //,level:string,icon:string,guild:string,joined:Date
 //,level:level,icon:icon,guild:guild,joined:joined
-  AddPlayerInformation(name:string):Observable<any>{
-    const player:Player = {name:name};
+  AddPlayerInformation(name:string,level:number):Observable<any>{
+    const player:Player = {name:name,level:level};
     return this.http.post('http://localhost:3000/api/players', player)
   }
 
@@ -29,8 +29,8 @@ export class PlayerService {
     return this.http.get('http://localhost:3000/api/players/'+id);
   }
 
-  UpdatePlayers(id:String,name:string):Observable<any>{
-    const player:Player = {name:name};
+  UpdatePlayers(id:String,name:string,level:number):Observable<any>{
+    const player:Player = {name:name,level:level};
     console.log("Edit"+id);
     return this.http.put('http://localhost:3000/api/players/'+id, player);
   }

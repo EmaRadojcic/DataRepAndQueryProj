@@ -23,8 +23,8 @@ player:any=[];
 
   }
   onEditPlayer(form:NgForm){
-    console.log(form.value.name);
-    this.playerService.UpdatePlayers(this.player._id,form.value.name).
+    console.log(form.value.name, form.value.level);
+    this.playerService.UpdatePlayers(this.player._id,form.value.name, form.value.level).
     subscribe();
   }
 }
