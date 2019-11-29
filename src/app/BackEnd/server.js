@@ -13,13 +13,21 @@ const Schema = mongoose.Schema;
 
 const playerSchema = new Schema({
   name:String,
-  level:number,
-//  guild:String,
+  level:Number,
+  guild:String,
  // icon:String,
  // joined:Date
 });
 
+
+const userSchema = new Schema({
+  userName:String,
+  pass:String
+
+});
+
 const PlayerModel = mongoose.model('player',playerSchema);
+const UserModel = mongoose.model('user',userSchema);
 
 //using cors
 app.use(cors());
@@ -36,7 +44,6 @@ app.use(function(req, res, next) {
 
 //get all players 
 app.get('/api/players', (req,res,next) => {
-
   console.log("get request")
   PlayerModel.find((err,data)=>{
     res.json({players:data});
@@ -55,34 +62,19 @@ app.delete('/api/players/:id', (req,res) =>{
   })
 })
 
-
-//search 
-/*app.get('/api/movies/search/:title/:criteria', (req,res)=>{
-  console.log(req.params.title);
-  console.log(req.params.criteria);
-if(req.params.criteria == 'title')
-  {
-  MovieModel.find({ 'title': req.params.title},
-(error,data) =>{
-  res.json(data);
-})
-  }
-})
-*/
-
 //post and upload players to DB
 app.post('/api/players', (req,res) =>{
 console.log('post Sucessfull');
 console.log(req.body)
 console.log(req.body.name);
-//console.log(req.body.level);
+console.log(req.body.level);
 //console.log(req.body.icon);
 
 PlayerModel.create({
   name: req.body.name,
   level: req.body.level,
  // icon: req.body.icon,
- // guild: req.body.guild,
+  guild: req.body.guild,
   //joined: req.body.joined
 
 });
@@ -98,10 +90,43 @@ app.get('/api/players/:id',(req,res)=>{
   })
 })
 
+//users
+////////////////////////////////////////////////
+
+//post and upload user to DB
+app.post('/api/users', (req,res) =>{
+  console.log('post Sucessfull');
+  console.log(req.body)
+  console.log(req.body.userName);
+  console.log(req.body.pass);
+
+  
+  UserModel.create({
+    userName: req.body.userName,
+    pass: req.body.pass,
+  });
+  res.json('User data uploaded')
+  })
+  
+  //get user Data
+  app.get('/api/users/:id',(req,res)=>{
+    console.log(req.params.id);
+  
+    UserModel.findById(req.params.id, (err, data)=>{
+      res.json(data);
+    })
+  })
+  
+
+//////////////////////////////////////////////////////
+
+
 //edit players 
 app.put('/api/players/:id', (req, res)=>{
   console.log(req.body);
   console.log("Edit "+req.params.id);
+
+
 
   //find id and update
   PlayerModel.findByIdAndUpdate(req.params.id,

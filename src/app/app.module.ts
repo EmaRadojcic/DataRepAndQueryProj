@@ -3,14 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatFormFieldModule, MatInputModule,MatRippleModule} from '@angular/material';
-import {MatSliderModule} from '@angular/material/slider';
-
-
-
-
+import { MatFormFieldModule, MatInputModule} from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+
 import {
   MatCardModule,
   MatButtonModule,
@@ -18,12 +16,15 @@ import {
   MatExpansionModule,
   MatNativeDateModule,
   MatDatepickerModule
+  
 } from '@angular/material';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { LoginComponent } from './login/login.component';
+import { WarriorReadComponent } from './warrior-read/warrior-read.component';
 
 @NgModule({
   declarations: [
@@ -32,15 +33,14 @@ import { HomePageComponent } from './home-page/home-page.component';
     CreateComponent,
     EditComponent,
     HomePageComponent,
-   
-    
+    LoginComponent,
+    WarriorReadComponent
   ],
   imports: [
-    MatSliderModule,
+    MatSelectModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRippleModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -52,9 +52,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule
- 
-
-
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

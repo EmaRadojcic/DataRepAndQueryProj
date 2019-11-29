@@ -1,7 +1,7 @@
 export interface Player {
-    name: string;
-   level: number;
+    name: String;
+   level: Number;
   //  icon: string;
-   // guild:string;
+    guild:string;
    // joined:Date;
   }

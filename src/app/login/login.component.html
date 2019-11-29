@@ -1,0 +1,21 @@
+<mat-card>
+        <form (submit)="onAddUser(userForm)" #userForm="ngForm">
+          <mat-form-field>
+            <label> username</label>
+            <input matInput type="text" name="username" ngModel required #title="ngModel">
+          </mat-form-field>
+      
+          <mat-form-field>
+              <label> pass</label>
+              <input matInput type="password" name="pass" ngModel required #content="ngModel">
+            </mat-form-field>
+    
+          <button mat-raised-button color="accent" type="submit">Save user</button>
+        </form>
+      </mat-card>
+      
+
+      
+  
+      
+      

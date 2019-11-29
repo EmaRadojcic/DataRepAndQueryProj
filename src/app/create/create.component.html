@@ -1,19 +1,24 @@
 <mat-card>
   <form (submit)="onAddPlayer(playerForm)" #playerForm="ngForm">
     <mat-form-field>
-      <label> Player Name:</label>
-      <input matInput type="text" name="name" placeholder = "Player Name" ngModel required #title="ngModel">
+      <label> Title</label>
+      <input matInput type="text" name="name" ngModel required #title="ngModel">
     </mat-form-field>
 
     <mat-form-field>
-    <label> Player Level:</label>
-    <input matInput type="number" ngMax =100 numericType="number"  min="0" max="100"  name="level" ngModel required #content="ngModel">
-    </mat-form-field>
-    <!-- <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field> -->
+        <label> Level</label>
+        <input matInput type="text" name="level" ngModel required #content="ngModel">
+      </mat-form-field>
+  
+
+<mat-form-field>
+  <mat-label>Guild</mat-label>
+  <mat-select matNativeControl ngModel name="guild" >
+    <mat-option value="warrior">Warrior</mat-option>
+    <mat-option value="assasin">Assassin</mat-option>
+    <mat-option value="mage">Mage</mat-option>
+  </mat-select>
+</mat-form-field>
 
     <button mat-raised-button color="accent" type="submit">Save Player</button>
   </form>
