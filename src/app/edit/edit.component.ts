@@ -24,7 +24,7 @@ player:any=[];
   }
   onEditPlayer(form:NgForm){
     console.log(form.value.name);
-    this.playerService.UpdatePlayers(this.player._id,form.value.name,form.value.level,form.value.selected).
+    this.playerService.UpdatePlayers(this.player._id,form.value.name,form.value.level,form.value.guild,form.value.icon).
     subscribe();
   }
 }

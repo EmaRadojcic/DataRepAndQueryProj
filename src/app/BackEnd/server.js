@@ -15,7 +15,7 @@ const playerSchema = new Schema({
   name:String,
   level:Number,
   guild:String,
- // icon:String,
+  icon:String,
  // joined:Date
 });
 
@@ -68,12 +68,12 @@ console.log('post Sucessfull');
 console.log(req.body)
 console.log(req.body.name);
 console.log(req.body.level);
-//console.log(req.body.icon);
+console.log(req.body.icon);
 
 PlayerModel.create({
   name: req.body.name,
   level: req.body.level,
- // icon: req.body.icon,
+ icon: req.body.icon,
   guild: req.body.guild,
   //joined: req.body.joined
 
@@ -108,14 +108,56 @@ app.post('/api/users', (req,res) =>{
   res.json('User data uploaded')
   })
   
-  //get user Data
-  app.get('/api/users/:id',(req,res)=>{
-    console.log(req.params.id);
-  
-    UserModel.findById(req.params.id, (err, data)=>{
-      res.json(data);
+
+  app.get('/api/users', (req,res,next) => {
+    console.log("get request users")
+    // UserModel.find((err,data)=>{
+    //   res.json({users:data});
+    //   console.log({users:data});
+    // })
+
+    UserModel.find({userName:req.params.id}, (err, data)=>{
+      console.log("found data")
+      console.log({users:data});
+     
     })
   })
+  //get user Data
+ 
+  // app.get('/api/users', (req,res,next,data) => {
+  //   console.log("get request user")
+  //   console.log("get: "+ req.params.id)
+  //   console.log(userName)
+
+  //  UserModel.find({ userName:req.params.id }, function(err) {
+     
+  //   console.log(data.userName)
+  //   if(req.params.id == data.userName){
+  //     console.log(req.params.id + "test");   
+  //   }else{
+  //     console.log('no match');
+  //   }
+  //    if (err) {
+
+  //        console.log('Signup error');
+  //       return done(err);
+  //    }
+
+ 
+  //    //this.router.navigateByUrl("/read");
+  //  })
+
+    //  data = UserModel.findOne({userName:req.params.id})
+    //    if(req.params.id == data.userName){
+    //      res.status(200);
+    //      res.json({
+    //        "message" : "User logged in: " 
+    //      });
+    //  }
+  
+ // )
+
+ 
   
 
 //////////////////////////////////////////////////////

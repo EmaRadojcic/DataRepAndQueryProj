@@ -1,4 +1,5 @@
 <mat-card>
+    <h2>REGISTER</h2>
         <form (submit)="onAddUser(userForm)" #userForm="ngForm">
           <mat-form-field>
             <label> username</label>
@@ -13,6 +14,24 @@
           <button mat-raised-button color="accent" type="submit">Save user</button>
         </form>
       </mat-card>
+
+      <mat-card>
+        <h2>LOGIN </h2>
+        <form (submit)="onLoginUser(loginForm)" #loginForm="ngForm">
+          <mat-form-field>
+            <label> username</label>
+            <input matInput type="text" name="usernamelogin" ngModel required #title="ngModel">
+          </mat-form-field>
+      
+          <mat-form-field>
+              <label> pass</label>
+              <input matInput type="password" name="passlogin" ngModel required #content="ngModel">
+            </mat-form-field>
+    
+          <button mat-raised-button color="accent" type="submit">Login</button>
+        </form>
+      </mat-card>
+      
       
 
       

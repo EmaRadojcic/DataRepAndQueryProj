@@ -7,18 +7,29 @@
 
     <mat-form-field>
         <label> Level</label>
-        <input matInput type="text" name="level" ngModel required #content="ngModel">
+        <input matInput type="number" name="level" ngModel required #content="ngModel">
+        
       </mat-form-field>
   
 
 <mat-form-field>
-  <mat-label>Guild</mat-label>
+  <mat-label>Guild:</mat-label>
   <mat-select matNativeControl ngModel name="guild" >
     <mat-option value="warrior">Warrior</mat-option>
     <mat-option value="assasin">Assassin</mat-option>
     <mat-option value="mage">Mage</mat-option>
   </mat-select>
 </mat-form-field>
+
+<mat-form-field>
+  <mat-label>Player Icon</mat-label>
+  <mat-select matNativeControl ngModel name="icon" >
+    <mat-option value="https://i.pinimg.com/564x/92/99/07/9299073daccfcaa54506ce844a8ff552.jpg">Icon 1</mat-option>
+    <mat-option value="icon2">Icon 2</mat-option>
+    <mat-option value="icon3">Icon 3</mat-option>
+  </mat-select>
+</mat-form-field>
+
 
     <button mat-raised-button color="accent" type="submit">Save Player</button>
   </form>

@@ -12,6 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   user: any = [];
+
   constructor(private loginService: LoginService, private router: Router,
     private route: ActivatedRoute) { }
 
@@ -22,6 +23,8 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  //register
   onAddUser(form: NgForm) {
     if (!form.valid) {
       return;
@@ -35,16 +38,16 @@ export class LoginComponent implements OnInit {
     form.resetForm();
   }
 
-
-  onRegister(form: NgForm) {
+  //login 
+  onLoginUser(form: NgForm) {
     if (!form.valid) {
       return;
-      
     }
-
-
-
+    console.log(form.value)
+    this.loginService.GetUsers(form.value.usernamelogin).subscribe(
+      () => {
+      }
+    );
 
   }
-
 }

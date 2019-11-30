@@ -3,7 +3,6 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../user.model';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,6 +19,8 @@ export class LoginService {
   }
 
   GetUsers(id:String):Observable<any>{
-    return this.http.get('http://localhost:3000/api/users/'+id);
+    return this.http.get('http://localhost:3000/api/users/');
   }
+
+
 }

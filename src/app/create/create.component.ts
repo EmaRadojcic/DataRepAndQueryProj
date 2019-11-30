@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { PlayerService } from '../Services/player.service';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -10,14 +11,13 @@ import { PlayerService } from '../Services/player.service';
 })
 export class CreateComponent implements OnInit {
   constructor(private playerService: PlayerService) { }
-
   ngOnInit() {
   }
   //get date
  // myDate : Date;
   onAddPlayer(form: NgForm) {
    
- 
+   
     if(!form.valid)
     {
       return;
@@ -30,7 +30,7 @@ export class CreateComponent implements OnInit {
     //console.log(this.myDate);
 
     //form.value.name,form.value.level,form.value.icon,form.value.guild,form.value.joined
-    this.playerService.AddPlayerInformation(form.value.name,form.value.level,form.value.guild).subscribe(
+    this.playerService.AddPlayerInformation(form.value.name,form.value.level,form.value.guild,form.value.icon).subscribe(
         ()=>{
         }
       );
