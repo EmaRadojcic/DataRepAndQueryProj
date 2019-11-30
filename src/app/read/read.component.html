@@ -11,8 +11,12 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+
+
 <button mat-button [routerLink]="['/warriors']" color="primary">Warriors</button>
-<mat-accordion *ngFor="let player of MyPlayers">
+<input [(ngModel)]="searchText" placeholder="search text goes here">
+
+<mat-accordion *ngFor="let player of MyPlayers | filter : searchText">
     <mat-expansion-panel [expanded]="false">
         <mat-expansion-panel-header>
             <mat-panel-title>
@@ -46,7 +50,8 @@
         </mat-panel-description>
 
         <mat-panel-description>
-                <mat-progress-bar class="progress" style="height: 20px;" mode="determinate" value="{{player.level}}"></mat-progress-bar>
+            <mat-progress-bar class="progress" style="height: 20px;" mode="determinate" value="{{player.level}}">
+            </mat-progress-bar>
         </mat-panel-description>
         <!-- <img src="{{player.icon}}"> -->
 
