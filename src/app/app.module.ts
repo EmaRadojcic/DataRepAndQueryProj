@@ -13,6 +13,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
+
 import {
   MatCardModule,
   MatButtonModule,
@@ -31,7 +32,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { WarriorReadComponent } from './warrior-read/warrior-read.component';
 import { WarriorPipe } from './warrior.pipe';
-import { SearchPipe } from './search.pipe';
 import { FilterPipe } from './filter.pipe';
 
 @NgModule({
@@ -44,7 +44,6 @@ import { FilterPipe } from './filter.pipe';
     LoginComponent,
     WarriorReadComponent,
     WarriorPipe,
-    SearchPipe,
     FilterPipe
   ],
   imports: [
