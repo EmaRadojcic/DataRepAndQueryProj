@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../user.model';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router: Router) { }
 
  GetUserInformation():Observable<any>{
     return this.http.get('http://localhost:3000/api/users');
@@ -22,7 +23,19 @@ export class LoginService {
     return this.http.get('http://localhost:3000/api/users/' + id );
   }
 
+  getlogin(username,password){
 
+    let body = {
+      username: username,
+      password: password
+    };
 
+    return new Promise(resolve => {
+      this.http.post('http://localhost:3000/api/users/login', body).subscribe(data => {
+        resolve(data);
+      });
+    });
+
+  }
 
 }

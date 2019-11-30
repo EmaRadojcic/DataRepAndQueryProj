@@ -109,61 +109,29 @@ app.post('/api/users', (req, res) => {
 })
 
 
-app.get('/api/users/:id', (req, res, next) => {
-  console.log("get request users")
-  console.log(req.params.id);
-  // UserModel.find((err,data)=>{
-  //   res.json({users:data});
-  //   console.log({users:data});
-  // })
-    UserModel.find({ userName: req.params.id }, (err, data) => {
-      res.json({ users: data });
-      console.log({ users: data })
-      console.log("userfound")
-      
-    })
-  
-})
-//get user Data
+//checks your details
+app.post("/api/users/login", (req, res) => {
+  console.log("Login at Work");
 
-// app.get('/api/users', (req,res,next,data) => {
-//   console.log("get request user")
-//   console.log("get: "+ req.params.id)
-//   console.log(userName)
+  var username = req.body.username;
+  var password = req.body.password;
 
-//  UserModel.find({ userName:req.params.id }, function(err) {
+  console.log(username, password);
 
-//   console.log(data.userName)
-//   if(req.params.id == data.userName){
-//     console.log(req.params.id + "test");   
-//   }else{
-//     console.log('no match');
-//   }
-//    if (err) {
-
-//        console.log('Signup error');
-//       return done(err);
-//    }
-
-
-//    //this.router.navigateByUrl("/read");
-//  })
-
-//  data = UserModel.findOne({userName:req.params.id})
-//    if(req.params.id == data.userName){
-//      res.status(200);
-//      res.json({
-//        "message" : "User logged in: " 
-//      });
-//  }
-
-// )
-
-
-
+  UserModel.findOne({userName: username, pass: password}, (err, UserModel) => {
+      if(err){
+          console.log(err);
+          return res.status(500).send();
+      }
+      if(!UserModel){
+          return res.status(404).send();
+      }
+      console.log("sent the code")
+      return res.status(200).send();
+  })
+});
 
 //////////////////////////////////////////////////////
-
 
 //edit players 
 app.put('/api/players/:id', (req, res) => {

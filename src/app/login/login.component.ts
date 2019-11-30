@@ -44,10 +44,9 @@ export class LoginComponent implements OnInit {
       return;
     }
     console.log(form.value)
-    this.loginService.GetUsers(form.value.usernamelogin).subscribe(
-      () => {
-      }
-    );
-
+    let p = this.loginService.getlogin(form.value.usernamelogin, form.value.passlogin);
+    p.then(data => {
+      this.router.navigateByUrl('/read');
+    });
   }
 }
