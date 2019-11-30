@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       () => {
       }
     );
-    console.log(form.value);
+    //console.log(form.value);
     form.resetForm();
   }
 

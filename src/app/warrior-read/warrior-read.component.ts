@@ -8,14 +8,13 @@ import {Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./warrior-read.component.css']
 })
 export class WarriorReadComponent implements OnInit {
+
   MyPlayers: any = [];
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
     this.playerService.GetPlayerInformation().subscribe((data) => {
-      
-      
-      this.MyPlayers = data.player;
+      this.MyPlayers = data.players;
       console.log(this.MyPlayers);
     })
   }
@@ -28,5 +27,6 @@ export class WarriorReadComponent implements OnInit {
       }
     );
   }
+
 
 }

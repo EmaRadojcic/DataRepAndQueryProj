@@ -19,8 +19,10 @@ export class LoginService {
   }
 
   GetUsers(id:String):Observable<any>{
-    return this.http.get('http://localhost:3000/api/users/');
+    return this.http.get('http://localhost:3000/api/users/' + id );
   }
+
+
 
 
 }
