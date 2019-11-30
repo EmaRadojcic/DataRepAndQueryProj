@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 import {
@@ -18,8 +20,9 @@ import {
   MatExpansionModule,
   MatNativeDateModule,
   MatDatepickerModule,
-  
 } from '@angular/material';
+
+
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -41,6 +44,7 @@ import { WarriorPipe } from './warrior.pipe';
     WarriorPipe
   ],
   imports: [
+    MatProgressBarModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatSelectModule,
