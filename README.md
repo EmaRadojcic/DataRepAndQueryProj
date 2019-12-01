@@ -1,4 +1,6 @@
 # RPGManagerApp
+## Name : Ema Radojcic
+## GNo : G00343805
 
 ## Project Description
 This project is a MEAN stack GMIT project that allows a user to add, edit, delete and show values from a MongoDB database.
@@ -22,7 +24,7 @@ Then, you can serve the project by running ng serve
 The opening page is a login component where the user is able to create a user name and password which will be saved to the DB.
 The Login component will then check the user values against the what is in the database and if it returns successfully then it will send the user to the read component. 
 <br>
-<a href="https://imgflip.com/gif/3i2o9q"><img src="https://i.imgflip.com/3i2o9q.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/3i2pxs"><img src="https://i.imgflip.com/3i2pxs.gif" title="made at imgflip.com"/></a>
 <br>
 ### Create Player
 To create a player, the user must go to the creative component and add in the user details. If any of the fields are left blank then they will glow red or if you enter values less than 100 then an alert will prompt the user to enter a value lower than 100. The form will not submit until these conditions are met.
