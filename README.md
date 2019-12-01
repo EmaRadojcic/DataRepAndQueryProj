@@ -19,6 +19,11 @@ npm install cors
 
 Then, you can serve the project by running ng serve
 
+## Running 
+Run the server.js file through the terminal using the node server.js command.
+Run the app throught the cmd prompt using the ng server command 
+The app should appear on localhost:4200
+
 ## User Guide
 ### Login Component 
 The opening page is a login component where the user is able to create a user name and password which will be saved to the DB.
