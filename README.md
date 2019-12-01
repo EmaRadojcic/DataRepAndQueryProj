@@ -37,7 +37,7 @@ To see all the player in the DB the user can go to the read component and a list
 ### Edit
 To edit players the user must go to the read component and drop down the user details. On pressing the edit button, they will be taken to a page where they can change the values of the player accordingly.
 <br>
-<a href="https://imgflip.com/gif/3i2qdb"><img src="https://i.imgflip.com/3i2qdb.gif" title="made at imgflip.com"/></a>### Delete 
+<a href="https://imgflip.com/gif/3i2qdb"><img src="https://i.imgflip.com/3i2qdb.gif" title="made at imgflip.com"/></a>
 
 ### Delete
 To delete players user must go to the read component and drop down the user details. On pressing the delete button, the db will delete the user.
@@ -47,4 +47,4 @@ To delete players user must go to the read component and drop down the user deta
 ### Search
 <br>
 There is a search bar on top of the read component. As the user types, all the user names that contain the characters within the search bar are shown.<br>
-<a href="https://imgflip.com/gif/3i2qn0"><img src="https://i.imgflip.com/3i2qn0.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/3i2qse"><img src="https://i.imgflip.com/3i2qse.gif" title="made at imgflip.com"/></a>
