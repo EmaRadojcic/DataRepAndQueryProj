@@ -1,10 +1,10 @@
 # RPGManagerApp
-## Name : Ema Radojcic
-## GNo : G00343805
+## Name: Ema Radojcic
+## GNo: G00343805
 
 ## Project Description
 This project is a MEAN stack GMIT project that allows a user to add, edit, delete and show values from a MongoDB database.
-This porject allows users to create player for a RPG type game and save the player information to the database.
+This project allows users to create a player for an RPG type game and save the player information to the database.
 
 ## Prerequisites 
 User must first install node.js and install angular CLI to test
@@ -21,13 +21,13 @@ Then, you can serve the project by running ng serve
 
 ## Running 
 Run the server.js file through the terminal using the node server.js command.
-Run the app throught the cmd prompt using the ng server command 
+Run the app throughout the cmd prompt using the ng serve command 
 The app should appear on localhost:4200
 
 ## User Guide
 ### Login Component 
-The opening page is a login component contians a register and login forms. 
-The register forms are where the user is able to create a user name and password which will be saved to the DB.
+The opening page is a login component contains a register and login forms. 
+The registration forms are where the user is able to create a user name and password which will be saved to the DB.
 The Login component will then check the user values against the what is in the database and if it returns successfully then it will send the user to the read component. 
 <br>
 <a href="https://imgflip.com/gif/3i2pxs"><img src="https://i.imgflip.com/3i2pxs.gif" title="made at imgflip.com"/></a>
@@ -38,7 +38,7 @@ To create a player, the user must go to the creative component and add in the us
 <a href="https://imgflip.com/gif/3i2qa5"><img src="https://i.imgflip.com/3i2qa5.gif" title="made at imgflip.com"/></a>
 <br>
 ### Read
-To see all the player in the DB the user can go to the read component and a list of all player names will show. Once the drop down is clicked,  all the revalent user information will be shown such as the name, guild, level, mana and dex levels.
+To see all the player in the DB the user can go to the read component and a list of all player names will show. Once the drop-down is clicked,  all the relevant user information will be shown such as the name, guild, level, mana and dex levels.
 ### Edit
 To edit players the user must go to the read component and drop down the user details. On pressing the edit button, they will be taken to a page where they can change the values of the player accordingly.
 <br>
