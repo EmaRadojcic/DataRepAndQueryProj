@@ -25,11 +25,14 @@ The Login component will then check the user values against the what is in the d
 ### Create Player
 To create a player, the user must go to the creative component and add in the user details. If any of the fields are left blank then they will glow red or if you enter values less than 100 then an alert will prompt the user to enter a value lower than 100. The form will not submit until these conditions are met.
 
+### Read
+To see all the player in the DB the user can go to the read component and a list of all player names will show. Once clicked all the revalent user information will be shown such as the name, guild, level, mana and dex levels
+
 ### Edit
 To edit players the user must go to the read component and drop down the user details. On pressing the edit button, they will be taken to a page where they can change the values of the player accordingly.
  
-#### Delete 
+### Delete 
 To delete players user must go to the read component and drop down the user details. On pressing the delete button, the db will delete the user.
 
-#### Search
+### Search
 There is a search bar on top of the read component. As the user types, all the user names that contain the characters within the search bar are shown.
