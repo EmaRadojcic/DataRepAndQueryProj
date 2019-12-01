@@ -29,10 +29,13 @@ export class LoginComponent implements OnInit {
     console.log(form.value);
     this.loginService.AddUserInformation(form.value.username, form.value.pass).subscribe(
       () => {
+  
       }
     );
     //console.log(form.value);
     form.resetForm();
+    location.reload();
+
   }
 
   //login 
@@ -47,6 +50,7 @@ export class LoginComponent implements OnInit {
     p.then(data => {
       //if data does through then navigate to next link
       this.router.navigateByUrl('/read');
+
     });
     form.resetForm();
   }

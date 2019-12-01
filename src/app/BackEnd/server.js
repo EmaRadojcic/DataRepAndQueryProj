@@ -91,7 +91,7 @@ app.post('/api/players', (req, res) => {
     name: req.body.name,
     level: req.body.level,
     mana: req.body.mana,
-    dex: req.body.mana,
+    dex: req.body.dex,
     icon: req.body.icon,
     guild: req.body.guild,
   });

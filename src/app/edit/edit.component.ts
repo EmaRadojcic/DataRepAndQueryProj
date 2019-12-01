@@ -41,7 +41,5 @@ player:any=[];
     console.log(form.value.name);
     this.playerService.UpdatePlayers(this.player._id,form.value.name, form.value.level, form.value.guild, form.value.icon,form.value.mana,form.value.dex).
     subscribe();
-//reset form
-    form.resetForm();
   }
 }
