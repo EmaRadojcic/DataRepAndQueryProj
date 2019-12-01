@@ -1,17 +1,24 @@
 # RPGManagerApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Project Description
+This project is a MEAN stack GMIT project that allows a user to add, edit, delete and show values from a MongoDB database.
+This porject allows users to create player for a RPG type game and save the player information to the database
 
-## Development server
+## Prerequisites 
+User must first install node.js and install angular CLI to test
+npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Before serving, you must also install angular animations
+npm install @angular/animations@latest --save
 
-## Code scaffolding
+The following also must be installed in the terminal 
+npm install mongoose
+npm install cors
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then, you can serve the project by running ng serve
 
-## Build
-
+## User Manuel 
+###
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
