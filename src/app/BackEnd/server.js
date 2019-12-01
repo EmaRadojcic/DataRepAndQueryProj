@@ -116,7 +116,7 @@ app.post('/api/users', (req, res) => {
   console.log(req.body.userName);
   console.log(req.body.pass);
 
-
+//creats user 
   UserModel.create({
     userName: req.body.userName,
     pass: req.body.pass,
@@ -135,7 +135,7 @@ app.post("/api/users/login", (req, res) => {
 
   console.log(username, password);
 
-  //finds if sucessfull send 200 status
+  //finds user username and pass from "/api/users/login" if sucessfull send 200 status
   UserModel.findOne({ userName: username, pass: password }, (err, UserModel) => {
     if (err) {
       console.log(err);
@@ -162,6 +162,7 @@ app.put('/api/players/:id', (req, res) => {
     })
 })
 
+//listens to which port its running on 
 app.listen(PORT, function () {
   console.log('Server is running on Port: ', PORT);
 });

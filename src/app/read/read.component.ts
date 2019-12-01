@@ -23,7 +23,7 @@ export class ReadComponent implements OnInit {
   }
 
 
-  //delete player id
+  //delete player with mathing id
   onDelete(id: String) {
     console.log("Deleting player with id: " + id);
     this.playerService.DeletePlayer(id).subscribe(
