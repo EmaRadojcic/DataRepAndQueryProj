@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
 
   //login 
   onLoginUser(form: NgForm) {
+    //if form is invalid then return
     if (!form.valid) {
       alert("Invalid");  
       return;

@@ -24,6 +24,7 @@ export class CreateComponent implements OnInit {
       return;
     }
 
+    //if value less then 100 then return
     if(form.value.level > 100 || form.value.guild > 100 || form.value.dex > 100 ){
       alert("Pease enter values less then 100");
       return;
