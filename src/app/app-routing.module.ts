@@ -6,29 +6,16 @@ import {CreateComponent} from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { LoginComponent } from './login/login.component';
 
-import { HomePageComponent } from 'src/app/home-page/home-page.component';
-import { WarriorReadComponent } from './warrior-read/warrior-read.component';
-
 const routes: Routes = [
   {
     path: 'read',
     component: ReadComponent
   },
   {
-  path: 'login',
+  path: '',
   component: LoginComponent
 },
 
-{
-  path: 'warriors',
-  component: WarriorReadComponent
-},
-
-
-  {
-    path:'',
-    component: HomePageComponent
-  },
   {
     path: 'create',
     component: CreateComponent

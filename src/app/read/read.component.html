@@ -12,44 +12,35 @@
     crossorigin="anonymous"></script>
 
 
-
-<button mat-button [routerLink]="['/warriors']" color="primary">Warriors</button>
-<input [(ngModel)]="searchText" placeholder="search text goes here">
+<input [(ngModel)]="searchText" placeholder="search text goes here" class="searchbar">
 
 <mat-accordion *ngFor="let player of MyPlayers | filter : searchText">
     <mat-expansion-panel [expanded]="false">
         <mat-expansion-panel-header>
-            <mat-panel-title>
-                <h3>Player Name:</h3>
-                <h3> {{ player.name }} </h3>
-
-            </mat-panel-title>
-
-
-            <mat-panel-description>
-
-                <h3>{{ player.guild }}</h3><br>
-
-
-            </mat-panel-description>
-
+            <h3>Player Name: {{ player.name }} </h3>
         </mat-expansion-panel-header>
 
         <mat-panel-description>
-            <img src="{{ player.icon }}">
+            <div class="col-sm-5">
+                <img class="myImg" src="{{ player.icon }}">
+            </div>
+            <div class="col-sm-7">
+                <h1><b>Player Name:</b>{{ player.name }}</h1>
+                <h1><b>Current Guild:</b>{{ player.guild }}</h1>
+                <h1><b>Current Level:</b>{{ player.level }}</h1>
+                <mat-progress-bar class="progress" style="height: 20px;" mode="determinate" value="{{player.level}}">
+                </mat-progress-bar>
 
-            <br>
+                <h1><b>Current Mana:</b>{{ player.mana }}</h1>
+                <mat-progress-bar class="progress manatype" style="height: 20px;" mode="determinate" value="{{player.mana}}">
+                </mat-progress-bar>
 
-        </mat-panel-description>
+                <h1><b>Current Dexterity:</b>{{ player.dex }}</h1>
+                <mat-progress-bar  class="progress" style="height: 20px;" mode="determinate" value="{{player.dex}}">
+                </mat-progress-bar>
 
+            </div>
 
-        <mat-panel-description>
-
-            <h3>{{ player.level }}</h3>
-
-        </mat-panel-description>
-
-        <mat-panel-description>
             <mat-progress-bar class="progress" style="height: 20px;" mode="determinate" value="{{player.level}}">
             </mat-progress-bar>
         </mat-panel-description>

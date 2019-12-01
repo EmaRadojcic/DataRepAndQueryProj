@@ -1,46 +1,58 @@
+<!--bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--bootstrap-->
+
+
 <mat-card>
-    <form (submit)="onEditPlayer(playerForm)" #playerForm="ngForm">
-        <mat-form-field>
-            <label> Player Name:</label>
-            <input matInput type="text" name="name" ngModel={{player.name}} required #title="ngModel">
-        </mat-form-field>
-
-        <mat-form-field>
-                <label> Player lvl:</label>
-                <input matInput type="text" name="level" ngModel={{player.level}} required #content="ngModel">
+        <form (submit)="onEditPlayer(playerForm)" #playerForm="ngForm" >
+          <mat-form-field>
+            <mat-label> Player Name:</mat-label>
+            <input matInput type="text" name="name" ngModel="{{player.name}} "required #title="ngModel">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>Player Level:</mat-label>
+             <input matInput type="number" name="level" ngModel="{{player.level}}" required #content="ngModel" value= {{player.level}}>
+      
+          <!-- <mat-slider name="slider" id='sliderelement'   matInput type="range"  ></mat-slider> -->
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>Player Mana Level:</mat-label>
+             <input matInput type="number" name="mana" ngModel="{{player.mana}}" required #content="ngModel" value= {{player.mana}}>
+          </mat-form-field>
+      
+          <mat-form-field>
+              <mat-label>Player Dex Level:</mat-label>
+               <input matInput type="number" name="dex" ngModel="{{player.dex}}" required #content="ngModel" value= {{player.dex}}>
             </mat-form-field>
+       
+          <mat-form-field>
+            <mat-label>Guild:</mat-label>
+            <mat-select matNativeControl ngModel="{{player.guild}}" name="guild" required value= {{player.guild}}>
+              <mat-option value="warrior">Warrior</mat-option>
+              <mat-option value="assassin">Assassin</mat-option>
+              <mat-option value="mage">Mage</mat-option>
+            </mat-select>
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>Player Icon</mat-label>
+            <mat-select matNativeControl ngModel="{{player.icon}}" name="icon" required value= {{player.icon}}> 
+              <mat-option value="https://i.pinimg.com/564x/92/99/07/9299073daccfcaa54506ce844a8ff552.jpg">Icon 1</mat-option>
+              <mat-option value="https://i.pinimg.com/564x/99/b0/39/99b0393e446c5ca743e795391e61452c.jpg">Icon 2</mat-option>
+              <mat-option value="https://i.pinimg.com/564x/8a/c1/86/8ac186992e3c785333cdfd169e2a5d4f.jpg">Icon 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+      
 
-            <mat-form-field>
-                    <label> Player Guild:</label>
-                    <input matInput type="text" name="guild" ngModel={{player.guild}} required #content="ngModel">
-                </mat-form-field>
-
-        <!-- <mat-form-field>
-            <label>Player Level</label>
-            <textarea matInput name="level" ngModel={{player.level}} required #content="ngModel"></textarea>
-        </mat-form-field>
-
-        <mat-form-field>
-            <label>Player Guild</label>
-            <textarea matInput name="guild" ngModel={{player.guild}} required #content="ngModel"></textarea>
-        </mat-form-field>
-
-
-        <mat-form-field>
-            <label>Player Icon:</label>
-            <textarea matInput rows="4" name="icon" ngModel={{player.icon}} required #content="ngModel"></textarea>
-        </mat-form-field>
-
-
-        <mat-form-field>
-            <label>Date Joined:</label>
-            <input matInput name="joined" ngModel={{player.joined}} [matDatepicker]="picker"
-                placeholder="Choose a date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-
-        </mat-form-field> -->
-
-        <button mat-raised-button color="accent" type="submit">Edit Player</button>
-    </form>
+    <button mat-raised-button color="accent" type="submit">Edit  Player</button>
+  </form>
 </mat-card>

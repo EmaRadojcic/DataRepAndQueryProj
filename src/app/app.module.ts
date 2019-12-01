@@ -11,9 +11,6 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
-
-
-
 import {
   MatCardModule,
   MatButtonModule,
@@ -26,13 +23,12 @@ import {
 
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
-import { WarriorReadComponent } from './warrior-read/warrior-read.component';
-import { WarriorPipe } from './warrior.pipe';
 import { FilterPipe } from './filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -42,11 +38,10 @@ import { FilterPipe } from './filter.pipe';
     EditComponent,
     HomePageComponent,
     LoginComponent,
-    WarriorReadComponent,
-    WarriorPipe,
     FilterPipe
   ],
-  imports: [
+  imports: [ 
+    MatSliderModule,
     MatProgressBarModule,
     ReactiveFormsModule,
     MatAutocompleteModule,

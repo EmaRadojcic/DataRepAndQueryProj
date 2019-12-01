@@ -17,11 +17,7 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.loginService.GetUsers(this.route.snapshot.params['id']).subscribe(
-      (data) => {
-        this.user = data;
-      }
-    );
+    
   }
 
   //register
@@ -29,6 +25,7 @@ export class LoginComponent implements OnInit {
     if (!form.valid) {
       return;
     }
+    //adds user information from form
     console.log(form.value);
     this.loginService.AddUserInformation(form.value.username, form.value.pass).subscribe(
       () => {
@@ -46,7 +43,9 @@ export class LoginComponent implements OnInit {
     console.log(form.value)
     let p = this.loginService.getlogin(form.value.usernamelogin, form.value.passlogin);
     p.then(data => {
+      //if data does through then navifate to next link
       this.router.navigateByUrl('/read');
     });
+    form.resetForm();
   }
 }
