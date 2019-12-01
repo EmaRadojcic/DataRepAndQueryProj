@@ -38,12 +38,13 @@ export class LoginComponent implements OnInit {
   //login 
   onLoginUser(form: NgForm) {
     if (!form.valid) {
+      alert("Invalid");  
       return;
     }
     console.log(form.value)
     let p = this.loginService.getlogin(form.value.usernamelogin, form.value.passlogin);
     p.then(data => {
-      //if data does through then navifate to next link
+      //if data does through then navigate to next link
       this.router.navigateByUrl('/read');
     });
     form.resetForm();

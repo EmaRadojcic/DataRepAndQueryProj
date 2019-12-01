@@ -29,7 +29,7 @@ export class LoginService {
       username: username,
       password: password
     };
-
+    //asycn gets data if true then data is resolved and sent 
     return new Promise(resolve => {
       this.http.post('http://localhost:3000/api/users/login', body).subscribe(data => {
         resolve(data);

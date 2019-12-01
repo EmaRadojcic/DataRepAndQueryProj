@@ -31,8 +31,15 @@ player:any=[];
       return;
     }
 
+    if(form.value.level > 100 || form.value.guild > 100 || form.value.dex > 100 ){
+      alert("Pease enter values less then 100");
+      return;
+    }
+
     console.log(form.value.name);
     this.playerService.UpdatePlayers(this.player._id,form.value.name, form.value.level, form.value.guild, form.value.icon,form.value.mana,form.value.dex).
     subscribe();
+//reset form
+    form.resetForm();
   }
 }

@@ -1,16 +1,17 @@
-
-   <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">WELCOME TO MY RPG MANAGER APP</h1>
-      <p class="lead">Store and save your players for all your future game sessions!</p>
-    </div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">WELCOME TO MY RPG MANAGER APP</h1>
+    <p class="lead">Store and save your players for all your future game sessions!</p>
   </div>
-   
-   <mat-toolbar color="primary"> 
-        <mat-toolbar-row class="toolRow">
-    <button mat-button [routerLink]="['/create']" color="Warn">Create</button>
-    <button mat-button [routerLink]="['/read']">Read</button>
-    <button mat-button [routerLink]="['']">Login</button>
-  </mat-toolbar-row>
-   </mat-toolbar>
-  <router-outlet></router-outlet>
+</div>
+
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="toolRow">
+      <button mat-button [routerLink]="['/create']" color="Warn">Create</button>
+      <button mat-button [routerLink]="['/read']">Read</button>
+      <button mat-button [routerLink]="['']">Login</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<router-outlet></router-outlet>
