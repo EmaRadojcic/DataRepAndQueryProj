@@ -26,7 +26,8 @@ The app should appear on localhost:4200
 
 ## User Guide
 ### Login Component 
-The opening page is a login component where the user is able to create a user name and password which will be saved to the DB.
+The opening page is a login component contians a register and login forms. 
+The register forms are where the user is able to create a user name and password which will be saved to the DB.
 The Login component will then check the user values against the what is in the database and if it returns successfully then it will send the user to the read component. 
 <br>
 <a href="https://imgflip.com/gif/3i2pxs"><img src="https://i.imgflip.com/3i2pxs.gif" title="made at imgflip.com"/></a>
@@ -38,7 +39,6 @@ To create a player, the user must go to the creative component and add in the us
 <br>
 ### Read
 To see all the player in the DB the user can go to the read component and a list of all player names will show. Once the drop down is clicked,  all the revalent user information will be shown such as the name, guild, level, mana and dex levels.
-
 ### Edit
 To edit players the user must go to the read component and drop down the user details. On pressing the edit button, they will be taken to a page where they can change the values of the player accordingly.
 <br>
