@@ -46,5 +46,5 @@ To delete players user must go to the read component and drop down the user deta
 
 ### Search
 <br>
-There is a search bar on top of the read component. As the user types, all the user names that contain the characters within the search bar are shown.<br>
+There is a search bar on top of the read component. As the user types, all the user names that contain the characters within the search bar are shown dynamically.<br>
 <a href="https://imgflip.com/gif/3i2qse"><img src="https://i.imgflip.com/3i2qse.gif" title="made at imgflip.com"/></a>
